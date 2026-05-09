@@ -1,0 +1,1816 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - DayZen</title>
+    <link rel="stylesheet" href="../css/about.css">
+    <link rel="stylesheet" href="../css/footer.css">
+</head>
+<body class="page-fade">
+<!-- Navbar assumed included globally -->
+
+<!-- Hero Section -->
+<header class="hero">
+    <div class="hero-content">
+        <h1>About DayZen</h1>
+        <p>Set Your Time, Manage Your Day!</p>
+
+        <!-- Hero Image -->
+        <img src="../assets/images/Illustrations/dayzen-hero.png"
+             alt="DayZen Hero"
+             class="hero-img">
+
+        <!-- Back to Home Button -->
+        <div class="back-home">
+            <a href="../index.html" class="btn-home">← Back to Home</a>
+        </div>
+    </div>
+</header>
+
+
+
+<!-- Overview Section -->
+<section class="overview">
+    <h2>What We Provide</h2>
+    <p>
+        DayZen helps you organize, track, and optimize your daily routines with ease.
+        From planning your tasks and setting reminders to analyzing your productivity,
+        we provide the tools to make every day more structured, efficient, and stress-free.
+    </p>
+</section>
+
+<!-- Cards Section -->
+<main>
+    <section class="cards">
+        <div class="card">
+            <img src="../assets/images/icons/target.png" alt="Mission Icon">
+            <h2>Our Mission</h2>
+            <p>To help users organize, track, and optimize their daily routines efficiently.</p>
+        </div>
+        <div class="card">
+            <img src="../assets/images/icons/user.png" alt="Founder Icon">
+            <h2>Founder</h2>
+            <p>brgkdm – The visionary behind DayZen.</p>
+        </div>
+        <div class="card">
+            <img src="../assets/images/icons/eye.png" alt="Vision Icon">
+            <h2>Our Vision</h2>
+            <p>To become the go-to platform for daily routine planning and productivity insights.</p>
+        </div>
+    </section>
+</main>
+
+<footer class="footer text-center">
+    <div class="container">
+        <div class="footer-brand">
+            <img src="../assets/images/logos/logoWhite.png" alt="DayZen logo">
+            <h3>DayZen</h3>
+        </div>
+        <p>Turn every day into a calmer, more productive routine.</p>
+        <div class="footer-links">
+            <a href="../index.html">Home</a>
+            <a href="help.html">Help</a>
+            <a href="#">Privacy</a>
+        </div>
+        <div class="security-subtle">🔒 Secure routines, elegant design.</div>
+    </div>
+</footer>
+
+<script src="../js/script.js"></script> <!-- dark/light mode -->
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <title>DayZen Blog</title>
+ <style>
+  :root {
+   --bg: #0b1120;
+   --surface: rgba(255, 255, 255, 0.08);
+   --text: #f4f7ff;
+   --accent: #7effd3;
+   --accent2: #6b8cff;
+   --shadow: 0 18px 45px rgba(0, 0, 0, 0.25);
+  }
+
+  * {
+   margin: auto;
+   box-sizing: border-box;
+   /* margin: 0; */
+   padding: 0;
+  }
+
+  body {
+   min-height: 100vh;
+   font-family: "Inter", Arial, sans-serif;
+   background: radial-gradient(circle at top, #1f2a4f, #0b1120 55%);
+   color: var(--text);
+   line-height: 1.6;
+  }
+
+  .page {
+   display: flex;
+   flex-direction: column;
+   max-width: 1120px;
+   margin:  auto;
+   padding: 40px 24px 80px;
+  }
+
+  .hero {
+   margin-bottom: 48px;
+   animation: fadeIn 1.1s ease both;
+  }
+
+  .hero h1 {
+   font-size: clamp(3rem, 5vw, 5rem);
+   letter-spacing: -0.05em;
+  text-align: center;
+  text-shadow: #8c919d 4px 4px 8px;
+  margin-bottom: 16px;
+text-decoration: dotted underline rgba(102, 160, 189, 0.28) 4px;
+
+  }
+
+  .hero p {
+   max-width: 760px;
+   font-size: 1.15rem;
+   color: rgba(244, 247, 255, 0.8);
+  }
+
+  .hero .highlight {
+   background: linear-gradient(90deg, rgba(126, 255, 211, 0.28), rgba(107, 140, 255, 0.28));
+   color: #fff;
+   padding: 0.2em 0.35em;
+   border-radius: 0.55rem;
+   font-weight: 600;
+  }
+
+  .posts {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+   gap: 24px;
+  }
+
+  .post {
+   background: linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02));
+   border: 1px solid rgba(255, 255, 255, 0.08);
+   border-radius: 26px;
+   padding: 28px;
+   box-shadow: var(--shadow);
+   position: relative;
+   overflow: hidden;
+   animation: floatUp 1.1s ease both;
+  }
+
+  .post::before {
+   content: "";
+   position: absolute;
+   top: -30%;
+   right: -30%;
+   width: 180px;
+   height: 180px;
+   background: radial-gradient(circle, rgba(126, 255, 211, 0.22), transparent 70%);
+   border-radius: 50%;
+   filter: blur(20px);
+  }
+
+  .post h2 {
+   font-size: 1.65rem;
+   margin-bottom: 14px;
+  }
+
+  .post p {
+   font-size: 1rem;
+   color: rgba(244, 247, 255, 0.78);
+   margin-bottom: 18px;
+  }
+
+  .post .tag {
+   display: inline-flex;
+   align-items: center;
+   gap: 0.5rem;
+   padding: 0.65rem 0.9rem;
+   background: rgba(126, 255, 211, 0.14);
+   border-radius: 999px;
+   color: #c8f7ea;
+   font-size: 0.95rem;
+   font-weight: 600;
+  }
+
+  .post .tag::before {
+   content: "";
+   width: 8px;
+   height: 8px;
+   border-radius: 50%;
+   background: var(--accent);
+  }
+
+  .post footer {
+   margin-top: 22px;
+   display: flex;
+   justify-content: space-between;
+   gap: 16px;
+   flex-wrap: wrap;
+   color: rgba(244, 247, 255, 0.65);
+   font-size: 0.95rem;
+  }
+
+  .post a {
+   color: var(--accent2);
+   text-decoration: none;
+   font-weight: 600;
+  }
+
+  @keyframes fadeIn {
+   from {
+    opacity: 0;
+    transform: translateY(18px);
+   }
+   to {
+    opacity: 1;
+    transform: translateY(0);
+   }
+  }
+
+  @keyframes floatUp {
+   from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.98);
+   }
+   to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+   }
+  }
+
+  @media (max-width: 600px) {
+   .page {
+    padding: 30px 16px 60px;
+   }
+
+   .hero p {
+    font-size: 1rem;
+   }
+
+   .post {
+    padding: 22px;
+   }
+  }
+  .back-home {
+
+   text-align: center;
+   margin-top: 40px;
+   background-color: #c8f7ea;
+   padding: 10px 12px;
+   border-radius: 60%;
+   text-decoration: none;
+   display: inline-block;
+  }
+  .btn-home{
+   font-weight: 600;
+   text-decoration: none;
+  }
+  .back-home :hover {
+   font-weight: 900;
+   font-size:medium;
+   font: bold;
+   color: var(--accent2);
+   transition: font 0.6s ease;
+  }
+ </style>
+</head>
+<body>
+ <main class="page">
+  <section class="hero">
+   <h1>DayZen Blog</h1>
+   <p>Explore fresh insights, creative updates, and thoughtful ideas with smooth motion and eye-catching typography. Every post is designed to feel modern, calm, and easy to read.</p>
+  </section>
+
+  <section class="posts">
+   <article class="post">
+    <h2>Crafting a Minimalist UI for Focused Work</h2>
+    <p>Learn how to build a clean interface that reduces distractions and makes content feel calm, balanced, and pleasant to browse on desktop or mobile.</p>
+    <span class="tag">Design</span>
+    <footer>
+     <span>April 28, 2026</span>
+     <a href="#">Read more →</a>
+    </footer>
+   </article>
+
+   <article class="post">
+    <h2>Animating Micro-interactions with Pure CSS</h2>
+    <p>Discover simple animation tricks that make buttons, cards, and page transitions feel alive without slowing down your site.</p>
+    <span class="tag">Frontend</span>
+    <footer>
+     <span>April 20, 2026</span>
+     <a href="#">Read more →</a>
+    </footer>
+   </article>
+
+   <article class="post">
+    <h2>Colorful Text Blocks for Better Visual Flow</h2>
+    <p>Use highlight text backgrounds and bold typography to guide readers through your content with clarity and style.</p>
+    <span class="tag">Typography</span>
+    <footer>
+     <span>April 12, 2026</span>
+     <a href="#">Read more →</a>
+
+     
+    </footer>
+   </article>
+  </section>
+  <div class="back-home">
+          <a href="../index.html" class="btn-home">← Back to Home</a>
+      </div> 
+ </main>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help and Support - DayZen</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/brand.css">
+    <!-- Custom Serene Theme CSS -->
+    <link rel="stylesheet" href="../css/help.css">
+</head>
+<body class="help-page">
+
+    <!-- Simple Navigation -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="../index.html" aria-label="DayZen">
+                <span class="brand-copy">
+                    <span class="logo-text">DayZen</span>
+                    <small class="brand-slogan" aria-hidden="true">Set Your Time, Manage Your Day!</small>
+                </span>
+            </a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="help.html">Help</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Help and Support Content -->
+    <div class="container help-content py-5">
+        <div class="text-center mb-5">
+            <h1 class="display-4 page-title">Peace & Serenity</h1>
+            <p class="lead subtitle">If you have any questions or need assistance, we're here for you.</p>
+        </div>
+        
+        <div class="faq-container">
+            <h2 class="faq-title mb-4">Frequently Asked Questions</h2>
+            <div class="accordion" id="faqAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            How can DayZen help me organize my daily routine?
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            DayZen provides a peaceful environment to track your tasks, set gentle reminders, and visualize your daily progress without the stress of traditional planning tools.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Can DayZen be used by busy professionals or students?
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Absolutely. Whether you're managing complex projects or a heavy study schedule, our "serene" interface helps you focus on what matters most, one step at a time.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            What makes DayZen different from other planning apps?
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Unlike other apps that focus on "productivity at any cost," DayZen prioritizes your mental well-being and helps you build routines that are sustainable and peaceful.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Floating Support Container -->
+    <div id="help-container"></div>
+
+    <footer class="text-center py-4 mt-5">
+        <div class="container">
+            <p class="mb-0">&copy; 2024 DayZen - Peace of Mind in Every Moment.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and Custom Support Script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/help-button.js"></script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DayZen - Daily Routine Tracking</title>
+    <link rel="stylesheet" href="../css/brand.css">
+      <link rel="stylesheet" href="../css/indexacc.css">
+    <link rel="stylesheet" href="../css/onboarding.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="../css/theme.css">
+    
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intro.js/8.3.2/introjs.min.css" integrity="sha512-LG7l1tbF72DGUqBESsGCnS8DdKqrLT3lmONMnSfkvZGWKIwUznlBPQUHYh0q1OEf67CDzXJ0/kARmPv4vTCVmw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link href="https://fonts.googleapis.com/css2?family=Libertinus+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+</head>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+
+            <!-- LEFT: Hamburger (mobile only) + Logo -->
+            <div class="header-left">
+                <button class="hamburger" id="hamburger-btn" aria-label="Open menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <div class="logo">
+                    <img src="../assets/images/logos/logo.png" alt="DayZen Logo">
+                    <div class="brand-copy">
+                        <h1>DayZen</h1>
+                        <small class="brand-slogan" aria-hidden="true">Set Your Time, Manage Your Day!</small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CENTER: Nav links (hidden on mobile) -->
+            <nav class="desktop-nav">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="../blog.html">Blog</a></li>
+                    <li><a href="#">Communication</a></li>
+                </ul>
+            </nav>
+
+            <!-- RIGHT: Take Tour + Profile + Theme -->
+            <div class="header-right">
+                <button class="tour-button" id="take-tour-btn">Take Tour</button>
+                <a href="Profile.html" class="user-icon">
+                    <img src="../assets/images/icons/user.png" alt="User Icon">
+                </a>
+                <div class="theme-toggle" id="theme-toggle">
+                    <img id="theme-icon" src="../assets/images/icons/sun.png" alt="Toggle Theme">
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-nav" id="mobile-nav">
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Communication</a></li>
+        </ul>
+    </div>
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Page Body -->
+    <div class="wrapper">
+        <div class="body-container">
+            <div class="main-content">
+                <h1 class="welcome">Welcome, <span id="user-name"></span>!</h1>
+                <h2>We Are Happy to See You Among Us.</h2>
+                <h3>What would you like to do next?</h3>
+
+                <div class="cta-container">
+                    <a href="Profile.html" class="cta-button primary-cta">
+                        <img src="../assets/images/icons/user.png" alt="Profile Icon" class="cta-icon">
+                        Complete Your Profile
+                    </a>
+                    <a href="new-project.html" class="cta-button secondary-cta">
+                        <img src="../assets/images/Illustrations/planning.png" alt="Project Icon" class="cta-icon">
+                        Start Your First Project
+                    </a>
+                    <a href="help.html" class="cta-button tertiary-cta">
+                        <img src="../assets/images/Illustrations/productivity.png" alt="Features Icon" class="cta-icon">
+                        Explore Features
+                    </a>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <h2>Profile Status</h2>
+                <p>Complete your profile</p>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 50%;"></div>
+                </div>
+                <p class="progress-text">50% Complete</p>
+                <a href="Profile.html" class="sidebar-button">Go to Profile</a>
+            </div>
+        </div>
+    </div>
+
+    <section id="routine-section">
+        <h2>Your Routines</h2>
+        <div id="routine-list"></div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 DayZen - All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Username
+        const username = localStorage.getItem("username");
+        document.getElementById("user-name").textContent = username || "Guest";
+
+        // Hamburger menu
+        const hamburgerBtn = document.getElementById("hamburger-btn");
+        const mobileNav = document.getElementById("mobile-nav");
+        const overlay = document.getElementById("overlay");
+
+        function openMenu() {
+            mobileNav.classList.add("open");
+            overlay.classList.add("open");
+            hamburgerBtn.setAttribute("aria-expanded", "true");
+            document.body.style.overflow = "hidden";
+        }
+
+        function closeMenu() {
+            mobileNav.classList.remove("open");
+            overlay.classList.remove("open");
+            hamburgerBtn.setAttribute("aria-expanded", "false");
+            document.body.style.overflow = "";
+        }
+
+        hamburgerBtn.addEventListener("click", () => {
+            mobileNav.classList.contains("open") ? closeMenu() : openMenu();
+        });
+
+        overlay.addEventListener("click", closeMenu);
+
+        // Close menu when clicking anywhere outside the drawer
+        document.addEventListener("click", (e) => {
+            if (
+                mobileNav.classList.contains("open") &&
+                !mobileNav.contains(e.target) &&
+                !hamburgerBtn.contains(e.target)
+            ) {
+                closeMenu();
+            }
+        });
+
+        mobileNav.querySelectorAll("a").forEach(link => link.addEventListener("click", closeMenu));
+
+        document.addEventListener("keydown", e => {
+            if (e.key === "Escape") closeMenu();
+        });
+
+        window.addEventListener("resize", () => {
+            if (window.innerWidth > 768) closeMenu();
+        });
+
+        // Theme toggle
+        const themeToggle = document.getElementById("theme-toggle");
+        const themeIcon = document.getElementById("theme-icon");
+
+        if (localStorage.getItem("dayzen-theme") === "dark") {
+            document.body.classList.add("dark");
+            themeIcon.src = "../assets/images/icons/moon.png";
+        }
+
+        themeToggle.addEventListener("click", () => {
+            const isDark = document.body.classList.toggle("dark");
+            themeIcon.src = isDark ? "../assets/images/icons/moon.png" : "../assets/images/icons/sun.png";
+            localStorage.setItem("dayzen-theme", isDark ? "dark" : "light");
+        });
+
+        // Routines
+        let routines = [{ name: "Morning Exercise", time: "07:00", repeat: "Every Day" }];
+
+        function listRoutines() {
+            const routineList = document.getElementById("routine-list");
+            routineList.innerHTML = routines.map((r, i) => `
+                <div class="routine">
+                    <h3>${r.name}</h3>
+                    <p>Time: ${r.time}</p>
+                    <p>Repeat: ${r.repeat}</p>
+                    <button onclick="deleteRoutine(${i})">Delete</button>
+                </div>
+            `).join("");
+        }
+
+        function deleteRoutine(index) {
+            routines.splice(index, 1);
+            listRoutines();
+        }
+
+        document.addEventListener("DOMContentLoaded", listRoutines);
+        listRoutines();
+    const loggedIn = localStorage.getItem('loggedIn');
+
+    if(loggedIn !== 'true'){
+        window.location.href = 'login.html';
+    }
+
+    const user = JSON.parse(localStorage.getItem('dayzenUser'));
+
+    console.log("Usuario:", user.identifier);
+    </script>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - DayZen</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background: linear-gradient(135deg, #a8dadc, #238db5);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            background: #ffffff;
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.12), 0 2px 8px rgba(0,0,0,0.06);
+            padding: 2.5rem 2rem;
+            width: 100%;
+            max-width: 420px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 1.75rem;
+        }
+        .logo img { width: 40px; height: 40px; object-fit: contain; }
+        .logo-name { font-size: 18px; font-weight: 700; color: #1a1a2e; letter-spacing: -0.3px; }
+
+        .welcome-message { font-size: 22px; font-weight: 700; color: #1a1a2e; margin-bottom: 4px; }
+        .welcome-sub { font-size: 13px; color: #7a8494; margin-bottom: 1.75rem; }
+
+        .field { margin-bottom: 1rem; }
+        .field label {
+            display: block; font-size: 11px; font-weight: 600;
+            color: #7a8494; text-transform: uppercase; letter-spacing: 0.7px; margin-bottom: 6px;
+        }
+        .input-wrap { position: relative; }
+        .input-wrap input {
+            width: 100%; background: #f7f9fc;
+            border: 1.5px solid #e2e8f0; border-radius: 8px;
+            color: #1a1a2e; font-family: 'Outfit', sans-serif;
+            font-size: 15px; padding: 11px 42px 11px 14px;
+            outline: none; transition: border-color 0.2s, background 0.2s;
+        }
+        .input-wrap input::placeholder { color: #b0bac6; font-size: 13px; }
+        .input-wrap input:focus   { border-color: #2891b7; background: #fff; }
+        .input-wrap input.valid   { border-color: #38a169; background: #fff; }
+        .input-wrap input.invalid { border-color: #e53e3e; background: #fff; }
+
+        .toggle-pw {
+            position: absolute; right: 11px; top: 50%; transform: translateY(-50%);
+            background: none; border: none; cursor: pointer;
+            font-size: 16px; color: #b0bac6; padding: 0;
+            display: flex; align-items: center; transition: color 0.2s;
+        }
+        .toggle-pw:hover { color: #2891b7; }
+
+        /* Status icon (checkmark / cross) for confirm password */
+        .status-icon {
+            position: absolute; right: 13px; top: 50%; transform: translateY(-50%);
+            font-size: 16px; pointer-events: none;
+        }
+
+        .field-hint { font-size: 11px; min-height: 16px; margin-top: 5px; color: #e53e3e; }
+        .field-hint.ok { color: #38a169; }
+
+        /* Password strength bars */
+        .pw-strength { display: flex; gap: 4px; margin-top: 7px; }
+        .pw-bar { height: 3px; flex: 1; background: #e2e8f0; border-radius: 2px; transition: background 0.35s; }
+
+        /* Strength label */
+        .pw-strength-label {
+            font-size: 11px; margin-top: 4px; color: #7a8494;
+            min-height: 14px; transition: color 0.3s;
+        }
+
+        /* Error box */
+        .error-box {
+            background: #fff5f5; border: 1px solid #fed7d7;
+            border-radius: 8px; padding: 10px 14px;
+            font-size: 13px; color: #c53030;
+            margin-bottom: 1rem; display: none;
+        }
+
+        #registerBtn {
+            width: 100%; background: #2891b7; color: #fff;
+            border: none; border-radius: 8px;
+            font-family: 'Outfit', sans-serif; font-size: 15px; font-weight: 600;
+            padding: 12px; cursor: pointer; margin-top: 0.5rem;
+            transition: background 0.2s, transform 0.1s, box-shadow 0.2s;
+            box-shadow: 0 2px 8px rgba(40,145,183,0.35);
+        }
+        #registerBtn:hover:not(:disabled) { background: #1e7aa0; box-shadow: 0 4px 14px rgba(40,145,183,0.45); }
+        #registerBtn:active:not(:disabled) { transform: scale(0.98); }
+        #registerBtn:disabled { background: #a8dadc; color: #fff; cursor: not-allowed; box-shadow: none; }
+
+        .divider { display: flex; align-items: center; gap: 12px; margin: 1.25rem 0; }
+        .divider::before, .divider::after { content: ''; flex: 1; height: 1px; background: #e2e8f0; }
+        .divider span { font-size: 12px; color: #b0bac6; white-space: nowrap; }
+
+        .social-buttons { display: flex; flex-direction: column; gap: 10px; }
+        .social-btn {
+            width: 100%; background: #fff; border: 1.5px solid #e2e8f0; border-radius: 8px;
+            color: #1a1a2e; font-family: 'Outfit', sans-serif; font-size: 14px; font-weight: 500;
+            padding: 10px 14px; cursor: pointer;
+            display: flex; align-items: center; justify-content: center; gap: 10px;
+            transition: background 0.18s, border-color 0.18s, transform 0.1s;
+        }
+        .social-btn:hover { background: #f7f9fc; border-color: #2891b7; }
+        .social-btn:active { transform: scale(0.98); }
+
+        .login-link { text-align: center; font-size: 13px; color: #7a8494; margin-top: 1.25rem; }
+        .login-link a { color: #2891b7; text-decoration: none; font-weight: 600; }
+        .login-link a:hover { text-decoration: underline; }
+
+        @media (max-width: 480px) {
+            .container { padding: 2rem 1.25rem; }
+            .welcome-message { font-size: 20px; }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <div class="logo">
+        <img src="../assets/images/logos/logo.png" alt="DayZen Logo">
+        <span class="logo-name">DayZen</span>
+    </div>
+
+    <h2 class="welcome-message">Create an Account</h2>
+    <p class="welcome-sub">Join DayZen and start managing your day.</p>
+
+    <div class="error-box" id="errorBox"></div>
+
+    <form id="registerForm" novalidate>
+
+        <!-- Username -->
+        <div class="field">
+            <label for="username">Username</label>
+            <div class="input-wrap">
+                <input type="text" id="username" name="username"
+                       placeholder="e.g. john_doe"
+                       autocomplete="off" required>
+            </div>
+            <div class="field-hint" id="hint-username"></div>
+        </div>
+
+        <!-- Email -->
+        <div class="field">
+            <label for="email">Email</label>
+            <div class="input-wrap">
+                <input type="email" id="email" name="email"
+                       placeholder="you@example.com"
+                       autocomplete="off" required>
+            </div>
+            <div class="field-hint" id="hint-email"></div>
+        </div>
+
+        <!-- Password -->
+        <div class="field">
+            <label for="password">Password</label>
+            <div class="input-wrap">
+                <input type="password" id="password" name="password"
+                       placeholder="Min. 8 characters" required>
+                <button type="button" class="toggle-pw" id="togglePw1" aria-label="Show password">
+                    <span id="eyeIcon1">&#128065;</span>
+                </button>
+            </div>
+            <div class="pw-strength">
+                <div class="pw-bar" id="bar1"></div>
+                <div class="pw-bar" id="bar2"></div>
+                <div class="pw-bar" id="bar3"></div>
+                <div class="pw-bar" id="bar4"></div>
+            </div>
+            <div class="pw-strength-label" id="strengthLabel"></div>
+            <div class="field-hint" id="hint-password"></div>
+        </div>
+
+        <!-- Confirm Password -->
+        <div class="field">
+            <label for="confirmPassword">Confirm Password</label>
+            <div class="input-wrap">
+                <input type="password" id="confirmPassword" name="confirmPassword"
+                       placeholder="Repeat your password" required>
+                <button type="button" class="toggle-pw" id="togglePw2" aria-label="Show confirm password">
+                    <span id="eyeIcon2">&#128065;</span>
+                </button>
+            </div>
+            <div class="field-hint" id="hint-confirm"></div>
+        </div>
+
+        <button type="submit" id="registerBtn" disabled>Create account</button>
+
+    </form>
+
+    <div class="divider"><span>or continue with</span></div>
+
+    <div class="social-buttons">
+        <button class="social-btn" type="button" onclick="alert('Google OAuth coming soon!')">
+            <svg width="18" height="18" viewBox="0 0 48 48">
+                <path fill="#FFC107" d="M43.611 20.083H42V20H24v8h11.303c-1.649 4.657-6.08 8-11.303 8-6.627 0-12-5.373-12-12s5.373-12 12-12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4 12.955 4 4 12.955 4 24s8.955 20 20 20 20-8.955 20-20c0-1.341-.138-2.65-.389-3.917z"/>
+                <path fill="#FF3D00" d="m6.306 14.691 6.571 4.819C14.655 15.108 18.961 12 24 12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4 16.318 4 9.656 8.337 6.306 14.691z"/>
+                <path fill="#4CAF50" d="M24 44c5.166 0 9.86-1.977 13.409-5.192l-6.19-5.238A11.91 11.91 0 0 1 24 36c-5.202 0-9.619-3.317-11.283-7.946l-6.522 5.025C9.505 39.556 16.227 44 24 44z"/>
+                <path fill="#1976D2" d="M43.611 20.083H42V20H24v8h11.303a12.04 12.04 0 0 1-4.087 5.571l.003-.002 6.19 5.238C36.971 39.205 44 34 44 24c0-1.341-.138-2.65-.389-3.917z"/>
+            </svg>
+            Continue with Google
+        </button>
+        <button class="social-btn" type="button" onclick="alert('Apple Sign In coming soon!')">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#1a1a2e">
+                <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+            </svg>
+            Continue with Apple
+        </button>
+        <button class="social-btn" type="button" onclick="alert('Facebook OAuth coming soon!')">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#1877F2">
+                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+            </svg>
+            Continue with Facebook
+        </button>
+    </div>
+
+    <p class="login-link">Already have an account? <a href="Register.html">Sign in</a></p>
+
+</div>
+
+<script>
+    const usernameEl  = document.getElementById('username');
+    const emailEl     = document.getElementById('email');
+    const passwordEl  = document.getElementById('password');
+    const confirmEl   = document.getElementById('confirmPassword');
+    const registerBtn = document.getElementById('registerBtn');
+    const errorBox    = document.getElementById('errorBox');
+    const bars        = ['bar1','bar2','bar3','bar4'].map(id => document.getElementById(id));
+    const strengthLbl = document.getElementById('strengthLabel');
+
+    const state = { username: false, email: false, password: false, confirm: false };
+
+    function showError(msg) { errorBox.textContent = msg; errorBox.style.display = 'block'; }
+    function hideError()    { errorBox.style.display = 'none'; }
+
+    function setField(name, inputEl, isValid, errorMsg, okMsg) {
+        const hint = document.getElementById('hint-' + name);
+        inputEl.classList.toggle('valid',   isValid);
+        inputEl.classList.toggle('invalid', !isValid && inputEl.value.length > 0);
+        if (!isValid && inputEl.value.length > 0) {
+            hint.textContent = errorMsg;
+            hint.className = 'field-hint';
+        } else if (isValid) {
+            hint.textContent = okMsg || '';
+            hint.className = 'field-hint ok';
+        } else {
+            hint.textContent = '';
+            hint.className = 'field-hint';
+        }
+        state[name] = isValid;
+        registerBtn.disabled = !(state.username && state.email && state.password && state.confirm);
+    }
+
+    // --- Username ---
+    usernameEl.addEventListener('input', () => {
+        hideError();
+        const v = usernameEl.value.trim();
+        if (!v.length) { setField('username', usernameEl, false, ''); return; }
+        const valid = /^[a-zA-Z0-9_]{3,30}$/.test(v);
+        setField('username', usernameEl, valid,
+            v.length < 3 ? 'At least 3 characters' : 'Only letters, numbers and _',
+            'Valid username');
+    });
+
+    // --- Email ---
+    emailEl.addEventListener('input', () => {
+        hideError();
+        const v = emailEl.value.trim();
+        if (!v.length) { setField('email', emailEl, false, ''); return; }
+        const valid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
+        setField('email', emailEl, valid, 'Enter a valid email address', 'Valid email');
+    });
+
+    // --- Password strength ---
+    function pwScore(pw) {
+        let s = 0;
+        if (pw.length >= 8)          s++;
+        if (/[A-Z]/.test(pw))        s++;
+        if (/[0-9]/.test(pw))        s++;
+        if (/[^A-Za-z0-9]/.test(pw)) s++;
+        return s;
+    }
+
+    passwordEl.addEventListener('input', () => {
+        hideError();
+        const pw    = passwordEl.value;
+        const score = pwScore(pw);
+        const barColors   = ['#e53e3e', '#e53e3e', '#d97706', '#38a169'];
+        const labelTexts  = ['', 'Too weak', 'Weak', 'Good', 'Strong'];
+        const labelColors = ['', '#e53e3e', '#d97706', '#2891b7', '#38a169'];
+
+        bars.forEach((b, i) => { b.style.background = i < score ? barColors[score - 1] : '#e2e8f0'; });
+
+        strengthLbl.textContent = pw.length ? labelTexts[score] : '';
+        strengthLbl.style.color = labelColors[score] || '#7a8494';
+
+        const isValid = pw.length >= 8 && score >= 2;
+        if (!pw.length)        setField('password', passwordEl, false, '');
+        else if (pw.length < 8) setField('password', passwordEl, false, 'At least 8 characters required');
+        else setField('password', passwordEl, isValid,
+            'Add uppercase letters, numbers or symbols', '');
+
+        // Re-validar confirmación si ya tiene algo escrito
+        if (confirmEl.value.length > 0) validateConfirm();
+    });
+
+    // --- Confirm password ---
+    function validateConfirm() {
+        const match = confirmEl.value === passwordEl.value && confirmEl.value.length > 0;
+        const mismatch = confirmEl.value.length > 0 && confirmEl.value !== passwordEl.value;
+
+        confirmEl.classList.toggle('valid',   match);
+        confirmEl.classList.toggle('invalid', mismatch);
+
+        const hint = document.getElementById('hint-confirm');
+        if (match) {
+            hint.textContent = 'Passwords match';
+            hint.className   = 'field-hint ok';
+        } else if (mismatch) {
+            hint.textContent = 'Passwords do not match';
+            hint.className   = 'field-hint';
+        } else {
+            hint.textContent = '';
+            hint.className   = 'field-hint';
+        }
+        state.confirm = match;
+        registerBtn.disabled = !(state.username && state.email && state.password && state.confirm);
+    }
+
+    confirmEl.addEventListener('input', validateConfirm);
+
+    // --- Toggle password visibility ---
+    document.getElementById('togglePw1').addEventListener('click', () => {
+        const show = passwordEl.type === 'password';
+        passwordEl.type = show ? 'text' : 'password';
+        document.getElementById('eyeIcon1').textContent = show ? '\uD83D\uDE48' : '\uD83D\uDC41';
+    });
+
+    document.getElementById('togglePw2').addEventListener('click', () => {
+        const show = confirmEl.type === 'password';
+        confirmEl.type = show ? 'text' : 'password';
+        document.getElementById('eyeIcon2').textContent = show ? '\uD83D\uDE48' : '\uD83D\uDC41';
+    });
+
+    // --- Submit ---
+    document.getElementById('registerForm').addEventListener('submit', e => {
+        e.preventDefault();
+        hideError();
+
+        const username = usernameEl.value.trim();
+        const email    = emailEl.value.trim();
+        const password = passwordEl.value;
+
+        // Verificar si ya existe
+        const users = JSON.parse(localStorage.getItem('dayzen_users') || '[]');
+        const takenUsername = users.find(u => u.username === username);
+        const takenEmail    = users.find(u => u.email === email);
+
+        if (takenUsername) { showError('This username is already taken. Try another one.'); return; }
+        if (takenEmail)    { showError('An account with this email already exists. Try signing in.'); return; }
+
+        // Guardar usuario — el identifier para el login es el username
+        users.push({ identifier: username, username, email, password });
+        localStorage.setItem('dayzen_users', JSON.stringify(users));
+
+        // Sesión activa
+        localStorage.setItem('username', username);
+        localStorage.setItem('dayzen_logged', 'true');
+
+        registerBtn.textContent = 'Account created! Redirecting...';
+        registerBtn.disabled = true;
+
+        setTimeout(() => {
+            window.location.href = 'indexacc.html';
+        }, 1200);
+    });
+</script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Start New Project - DayZen</title>
+    
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libertinus+Sans&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Intro.js for Tour -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intro.js/8.3.2/introjs.min.css" integrity="sha512-LG7l1tbF72DGUqBESsGCnS8DdKqrLT3lmONMnSfkvZGWKIwUznlBPQUHYh0q1OEf67CDzXJ0/kARmPv4vTCVmw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../css/brand.css">
+
+    <style>
+        :root {
+            --zen-green: #2ecc71;
+            --zen-blue: #3498db;
+            --zen-light-green: #e8f5e9;
+            --zen-light-blue: #e3f2fd;
+            --zen-bg: #ffffff;
+            --zen-white: #ffffff;
+            --zen-text: #2c3e50;
+            --zen-muted: #7f8c8d;
+            --nav-height: 80px;
+            --card-shadow: rgba(46, 204, 113, 0.08);
+            --border-color: rgba(52, 152, 219, 0.1);
+            --hero-gradient: linear-gradient(135deg, #f0fff4 0%, #ebf8ff 100%);
+            --cta-gradient: linear-gradient(135deg, #2ecc71 0%, #3498db 100%);
+        }
+
+        [data-theme="dark"] {
+            --zen-bg: #1a1a2e;
+            --zen-white: #16213e;
+            --zen-text: #e9ecef;
+            --zen-muted: #94a3b8;
+            --card-shadow: rgba(0, 0, 0, 0.4);
+            --border-color: rgba(255, 255, 255, 0.05);
+            --hero-gradient: linear-gradient(135deg, #0f3460 0%, #1a1a2e 100%);
+            --zen-light-green: #1b4d3e;
+            --zen-light-blue: #1e3a5f;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--zen-bg);
+            color: var(--zen-text);
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Libertinus Sans', sans-serif;
+            font-weight: 700;
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: var(--zen-white) !important;
+            min-height: var(--nav-height);
+            border-bottom: 1px solid var(--border-color);
+            box-shadow: 0 2px 15px rgba(0,0,0,0.02);
+            z-index: 1030;
+            transition: background-color 0.3s ease;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .logo-container img {
+            width: 40px;
+            margin-right: 10px;
+        }
+
+        .logo-container h1 {
+            font-size: 1.5rem;
+            color: var(--zen-text);
+            margin: 0;
+        }
+
+        .logo-container .brand-slogan {
+            color: var(--zen-text);
+        }
+
+        .nav-link {
+            color: var(--zen-text) !important;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            padding: 8px 12px !important;
+            margin: 0 5px;
+        }
+
+        .nav-link:hover {
+            color: var(--zen-green) !important;
+        }
+
+        .nav-img {
+            height: 18px;
+            margin-right: 6px;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 160px 0 120px;
+            background: var(--hero-gradient);
+            border-bottom: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+        }
+
+        .hero h2 {
+            font-size: 2.8rem;
+            color: var(--zen-text);
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--zen-muted);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Form Card */
+        .project-form-card {
+            max-width: 800px;
+            margin: -50px auto 60px;
+            background: var(--zen-white);
+            padding: 40px;
+            border-radius: 24px;
+            box-shadow: 0 15px 45px var(--card-shadow);
+            border: 1px solid var(--border-color);
+            position: relative;
+            z-index: 10;
+            transition: all 0.3s ease;
+        }
+
+        .form-label {
+            font-weight: 600;
+            color: var(--zen-text);
+            margin-bottom: 8px;
+        }
+
+        .form-control {
+            border-radius: 12px;
+            padding: 12px 15px;
+            border: 1px solid var(--border-color);
+            background-color: var(--zen-white);
+            color: var(--zen-text);
+            transition: all 0.3s ease;
+        }
+
+        .form-control:focus {
+            border-color: var(--zen-green);
+            background-color: var(--zen-white);
+            color: var(--zen-text);
+            box-shadow: 0 0 0 3px rgba(46, 204, 113, 0.1);
+        }
+
+        .form-control::placeholder {
+            color: var(--zen-muted);
+            opacity: 0.7;
+        }
+
+        /* Type Selection Grid */
+        .project-types-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .type-card {
+            background: var(--zen-white);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 25px 15px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .type-card:hover {
+            border-color: var(--zen-blue);
+            transform: translateY(-5px);
+            background: var(--zen-white);
+        }
+
+        .type-card.selected {
+            background: var(--zen-light-green);
+            border-color: var(--zen-green);
+            box-shadow: 0 8px 20px rgba(46, 204, 113, 0.1);
+        }
+
+        .type-card img {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 15px;
+        }
+
+        .type-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+            color: var(--zen-text);
+        }
+
+        .type-card p {
+            font-size: 0.85rem;
+            color: var(--zen-muted);
+            margin: 0;
+        }
+
+        /* Buttons */
+        .cta-group {
+            display: flex;
+            gap: 15px;
+            margin-top: 40px;
+            justify-content: center;
+        }
+
+        .btn-zen {
+            padding: 12px 30px;
+            border-radius: 12px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            min-width: 180px;
+        }
+
+        .btn-zen-primary {
+            background: var(--cta-gradient);
+            color: white;
+            box-shadow: 0 4px 15px rgba(46, 204, 113, 0.2);
+        }
+
+        .btn-zen-primary:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+            color: white;
+        }
+
+        .btn-zen-secondary {
+            background: var(--zen-white);
+            color: var(--zen-text);
+            border: 1px solid var(--border-color);
+        }
+
+        .btn-zen-secondary:hover {
+            background: var(--zen-light-blue);
+            color: var(--zen-text);
+        }
+
+        .btn-tour {
+            background: #1a5276; /* Much darker blue for high contrast */
+            color: #ffffff !important;
+            border: none;
+            transition: all 0.3s ease;
+            font-weight: 600;
+        }
+
+        .btn-tour:hover {
+            background: #154360;
+            transform: scale(1.05);
+            color: #ffffff !important;
+        }
+
+        /* Theme Toggle */
+        #theme-toggle {
+            background: none;
+            border: none;
+            padding: 8px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: background-color 0.3s ease;
+            margin-right: 10px;
+        }
+
+        #theme-toggle:hover {
+            background-color: var(--border-color);
+        }
+
+        #theme-toggle svg {
+            width: 22px;
+            height: 22px;
+            fill: var(--zen-text);
+            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* Footer */
+        .footer {
+            background-color: var(--zen-white);
+            border-top: 1px solid var(--border-color);
+            padding: 40px 0;
+            text-align: center;
+            margin-top: auto;
+            transition: all 0.3s ease;
+        }
+
+        .footer p {
+            margin-bottom: 10px;
+            color: var(--zen-muted);
+        }
+
+        .footer a {
+            color: var(--zen-blue);
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        @media (max-width: 768px) {
+            .hero h2 { font-size: 2rem; }
+            .project-form-card { margin: -30px 15px 40px; padding: 25px; }
+            .project-types-grid { grid-template-columns: 1fr; }
+            .cta-group { flex-direction: column; }
+        }
+
+        /* Intro.js Customization */
+        .introjs-tooltip {
+            border-radius: 16px;
+            font-family: 'Poppins', sans-serif;
+        }
+        .introjs-nextbutton {
+            background: var(--zen-green) !important;
+            color: white !important;
+            border: none !important;
+            text-shadow: none !important;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a href="../index.html" class="logo-container" aria-label="DayZen">
+                <img src="../assets/images/logos/logo.png" alt="DayZen Logo">
+                <div class="brand-copy">
+                    <h1>DayZen</h1>
+                    <small class="brand-slogan" aria-hidden="true">Set Your Time, Manage Your Day!</small>
+                </div>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav_items">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="nav_items">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">
+                            <img src="../assets/images/Illustrations/home.png" class="nav-img" /> Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">
+                            <img src="../assets/images/Illustrations/about_us.png" class="nav-img" /> About Us
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <img src="../assets/images/Illustrations/blog.png" class="nav-img" /> Blog
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="help.html">
+                            <img src="../assets/images/Illustrations/communication.png" class="nav-img" /> Help
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Profile.html">
+                            <img src="../assets/images/icons/userColor.png" class="nav-img" /> Profile
+                        </a>
+                    </li>
+                    <li class="nav-item ms-lg-2 d-flex align-items-center">
+                        <button id="theme-toggle" title="Toggle Night Mode">
+                            <svg viewBox="0 0 24 24">
+                                <path id="theme-icon-path" d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9 9-4.03 9-9c0-.46-.04-.92-.1-1.36-.98 1.37-2.58 2.26-4.4 2.26-3.03 0-5.5-2.47-5.5-5.5 0-1.82.89-3.42 2.26-4.4-.44-.06-.9-.1-1.36-.1z"/>
+                            </svg>
+                        </button>
+                        <button class="btn btn-tour btn-sm rounded-pill px-4 tour-button">Take Tour</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="container">
+        <h2>Start Your First Project</h2>
+        <p>A serene space to organize your life. Achieve your goals with clarity and peace.</p>
+    </div>
+</section>
+
+<main class="container">
+    <div class="project-form-card">
+        <form id="projectForm">
+            <div class="mb-4">
+                <label for="project-name" class="form-label">What's the name of your project?</label>
+                <input type="text" class="form-control" id="project-name" placeholder="e.g., Daily Meditation" required>
+            </div>
+
+            <div class="mb-4">
+                <label for="project-description" class="form-label">Briefly describe your goal</label>
+                <textarea class="form-control" id="project-description" rows="2" placeholder="My goal is to..."></textarea>
+            </div>
+
+            <div class="form-group" id="Project-Type">
+                <label>Project Type</label>
+                <div class="project-types">
+                    <div class="project-type-card">
+                        <img src="../assets/images/Illustrations/productivity.png" alt="Fitness">
+                        <h3>Fitness</h3>
+                        <p>Health & Vitality.</p>
+                    </div>
+                    <div class="project-type-card">
+                        <img src="../assets/images/Illustrations/planning.png" alt="Study">
+                        <h3>Study</h3>
+                        <p>Growth & Focus.</p>
+                    </div>
+                    <div class="project-type-card">
+                        <img src="../assets/images/Illustrations/reward.png" alt="Work">
+                        <h3>Work</h3>
+                        <p>Impact & Flow.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cta-group">
+                <button type="submit" class="btn-zen btn-zen-primary cta-button primary-cta">Create Project</button>
+                <a href="indexacc.html" class="btn-zen btn-zen-secondary">Cancel</a>
+            </div>
+        </form>
+    </div>
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <p>© 2024 DayZen. Your companion for a balanced life.</p>
+        <div>
+            <a href="privacy.html">Privacy Policy</a>
+            <span class="text-muted">|</span>
+            <a href="terms.html">Terms of Service</a>
+        </div>
+    </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Theme Toggle Logic
+    const themeToggle = document.getElementById('theme-toggle');
+    const themeIconPath = document.getElementById('theme-icon-path');
+    const body = document.documentElement;
+
+    const moonPath = "M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9 9-4.03 9-9c0-.46-.04-.92-.1-1.36-.98 1.37-2.58 2.26-4.4 2.26-3.03 0-5.5-2.47-5.5-5.5 0-1.82.89-3.42 2.26-4.4-.44-.06-.9-.1-1.36-.1z";
+    const sunPath = "M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zM2 13h2c.55 0 1-.45 1-1s-.45-1-1-1H2c-.55 0-1 .45-1 1s.45 1 1 1zm18 0h2c.55 0 1-.45 1-1s-.45-1-1-1h-2c-.55 0-1 .45-1 1s.45 1 1 1zM11 2v2c0 .55.45 1 1 1s1-.45 1-1V2c0-.55-.45-1-1-1s-1 .45-1 1zm0 18v2c0 .55.45 1 1 1s1-.45 1-1v-2c0-.55-.45-1-1-1s-1 .45-1 1zM5.99 4.58c-.39-.39-1.03-.39-1.41 0s-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41L5.99 4.58zm12.37 12.37c-.39-.39-1.03-.39-1.41 0s-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41l-1.06-1.06zm1.06-12.37c-.39-.39-1.03-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06c.39-.38.39-1.02 0-1.41zM7.05 18.36c.39-.39.39-1.03 0-1.41l-1.06-1.06c-.39-.39-1.03-.39-1.41 0s-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0z";
+
+    const currentTheme = localStorage.getItem('theme') || 'light';
+    if (currentTheme === 'dark') {
+        body.setAttribute('data-theme', 'dark');
+        themeIconPath.setAttribute('d', sunPath);
+    }
+
+    themeToggle.addEventListener('click', () => {
+        const isDark = body.getAttribute('data-theme') === 'dark';
+        if (isDark) {
+            body.removeAttribute('data-theme');
+            themeIconPath.setAttribute('d', moonPath);
+            localStorage.setItem('theme', 'light');
+        } else {
+            body.setAttribute('data-theme', 'dark');
+            themeIconPath.setAttribute('d', sunPath);
+            localStorage.setItem('theme', 'dark');
+        }
+    });
+
+    // Routine selection
+    const cards = document.querySelectorAll('.type-card');
+    let selectedType = null;
+    
+    cards.forEach(card => {
+        card.addEventListener('click', () => {
+            cards.forEach(c => c.classList.remove('selected'));
+            card.classList.add('selected');
+            selectedType = card.dataset.type;
+        });
+    });
+
+    document.getElementById('projectForm').addEventListener('submit', (e) => {
+        e.preventDefault();
+        const name = document.getElementById('project-name').value;
+        
+        if(!selectedType) {
+            alert('Please select a routine type to continue.');
+            return;
+        }
+        
+        alert(`Success! Your "${name}" ${selectedType} project has been created.`);
+        window.location.href = 'indexacc.html';
+    });
+});
+</script>
+
+<!-- Bootstrap Bundle JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Intro.js JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/intro.js/8.3.2/intro.min.js" integrity="sha512-5ykRz1AkSpATwLO5fFqJb7Y5kprfzu/q9PbRVSOspLcn2Tm7m6vZIAyoUA4a5GFNRIlxM43kHXmYEphfz3eOWA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<!-- Onboarding Script -->
+<script src="../js/onboarding-project.js"></script>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DayZen Profile</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/profile.css">
+    <link rel="stylesheet" href="../css/onboarding.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intro.js/8.3.2/introjs.min.css" integrity="sha512-LG7l1tbF72DGUqBESsGCnS8DdKqrLT3lmONMnSfkvZGWKIwUznlBPQUHYh0q1OEf67CDzXJ0/kARmPv4vTCVmw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <span id="back-btn"><i class="fa-solid fa-arrow-left"></i></span>
+        
+        <div class="header-container">
+            <h1 style="margin-left: 6vw;">Complete Your DayZen Profile</h1>
+            <button id="take-tour-btn" class="tour-button">
+                <i class="fa-solid fa-route"></i> Take Tour
+            </button>
+        </div>
+
+        <form class="profile-section">
+            <!-- Profile Photo Section with Enhanced UI -->
+            <div class="profile-photo">
+                <div class="image-container">
+                    <img src="../assets/images/icons/user.png" width="150" height="150" alt="Profile Photo" id="profile-img">
+                    <div class="image-overlay">
+                        <i class="fa-solid fa-camera"></i>
+                    </div>
+                </div>
+                <label for="photo-upload" class="upload-label">
+                    <i class="fa-solid fa-upload"></i> Add Profile Photo
+                </label>
+                <input type="file" id="photo-upload" accept="image/*">
+                <p class="helper-text">JPG, PNG or GIF (max. 5MB)</p>
+            </div>
+
+            <!-- Bio Section with Character Counter -->
+            <div class="form-group">
+                <label for="bio">
+                    <i class="fa-solid fa-pen-to-square"></i> Bio
+                </label>
+                <div class="textarea-wrapper">
+                    <textarea id="bio" placeholder="Tell us about yourself and your fitness journey..." maxlength="500"></textarea>
+                    <span class="char-counter">Max 500 characters</span>
+                </div>
+            </div>
+
+            <!-- Fitness Preferences with Icons -->
+            <div class="form-group" id="select-preference">
+                <label style="font-weight: 600;">
+                    <i class="fa-solid fa-dumbbell"></i> Fitness Preferences
+                </label>
+                <p class="section-subtitle">Select all that interest you</p>
+                <div class="preferences">
+                    <div class="preference-item">
+                        <input type="checkbox" id="cardio" name="preferences">
+                        <label for="cardio">
+                            <i class="fa-solid fa-heart-pulse"></i> Cardio
+                        </label>
+                    </div>
+                    <div class="preference-item">
+                        <input type="checkbox" id="strength" name="preferences">
+                        <label for="strength">
+                            <i class="fa-solid fa-dumbbell"></i> Strength Training
+                        </label>
+                    </div>
+                    <div class="preference-item">
+                        <input type="checkbox" id="yoga" name="preferences">
+                        <label for="yoga">
+                            <i class="fa-solid fa-spa"></i> Yoga
+                        </label>
+                    </div>
+                    <div class="preference-item">
+                        <input type="checkbox" id="hiit" name="preferences">
+                        <label for="hiit">
+                            <i class="fa-solid fa-fire-flame-curved"></i> HIIT
+                        </label>
+                    </div>
+                    <div class="preference-item">
+                        <input type="checkbox" id="pilates" name="preferences">
+                        <label for="pilates">
+                            <i class="fa-solid fa-person-walking"></i> Pilates
+                        </label>
+                    </div>
+                    <div class="preference-item">
+                        <input type="checkbox" id="cycling" name="preferences">
+                        <label for="cycling">
+                            <i class="fa-solid fa-bicycle"></i> Cycling
+                        </label>
+                    </div>
+                    <div class="preference-item">
+                        <input type="checkbox" id="swimming" name="preferences">
+                        <label for="swimming">
+                            <i class="fa-solid fa-person-swimming"></i> Swimming
+                        </label>
+                    </div>
+                    <div class="preference-item">
+                        <input type="checkbox" id="running" name="preferences">
+                        <label for="running">
+                            <i class="fa-solid fa-person-running"></i> Running
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fitness Goal with Custom Select -->
+            <div class="form-group" id="fitness-goal-group">
+                <label for="fitness-goal" style="font-weight: 700;">
+                    <i class="fa-solid fa-bullseye"></i> Primary Fitness Goal
+                </label>
+                <div class="select-wrapper">
+                    <select id="fitness-goal" required>
+                        <option value="">Select your primary goal</option>
+                        <option value="weight-loss">🔥 Weight Loss</option>
+                        <option value="muscle-gain">💪 Muscle Gain</option>
+                        <option value="endurance">🏃 Improve Endurance</option>
+                        <option value="flexibility">🧘 Increase Flexibility</option>
+                        <option value="overall-health">❤️ Overall Health</option>
+                        <option value="stress-relief">😌 Stress Relief</option>
+                    </select>
+                    <i class="fa-solid fa-chevron-down select-arrow"></i>
+                </div>
+            </div>
+
+            <!-- Experience Level (New Addition) -->
+            <div class="form-group">
+                <label for="experience-level">
+                    <i class="fa-solid fa-star"></i> Experience Level
+                </label>
+                <div class="experience-levels">
+                    <div class="experience-item">
+                        <input type="radio" id="beginner" name="experience" value="beginner">
+                        <label for="beginner">
+                            <i class="fa-solid fa-seedling"></i>
+                            <span class="exp-title">Beginner</span>
+                            <span class="exp-desc">Just starting out</span>
+                        </label>
+                    </div>
+                    <div class="experience-item">
+                        <input type="radio" id="intermediate" name="experience" value="intermediate">
+                        <label for="intermediate">
+                            <i class="fa-solid fa-chart-line"></i>
+                            <span class="exp-title">Intermediate</span>
+                            <span class="exp-desc">Regular workouts</span>
+                        </label>
+                    </div>
+                    <div class="experience-item">
+                        <input type="radio" id="advanced" name="experience" value="advanced">
+                        <label for="advanced">
+                            <i class="fa-solid fa-trophy"></i>
+                            <span class="exp-title">Advanced</span>
+                            <span class="exp-desc">Experienced athlete</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Weekly Availability -->
+            <div class="form-group">
+                <label for="availability">
+                    <i class="fa-solid fa-calendar-days"></i> Weekly Availability
+                </label>
+                <p class="section-subtitle">How many days per week can you dedicate to fitness?</p>
+                <div class="availability-slider">
+                    <input type="range" id="availability" name="availability" min="1" max="7" value="3" class="slider">
+                    <div class="slider-labels">
+                        <span>1 day</span>
+                        <span>3-4 days</span>
+                        <span>7 days</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Time Preference -->
+            <div class="form-group">
+                <label>
+                    <i class="fa-solid fa-clock"></i> Preferred Workout Time
+                </label>
+                <div class="time-preference">
+                    <div class="time-item">
+                        <input type="radio" id="morning" name="time" value="morning">
+                        <label for="morning">
+                            <i class="fa-solid fa-sunrise"></i>
+                            <span>Morning</span>
+                            <small>5am - 11am</small>
+                        </label>
+                    </div>
+                    <div class="time-item">
+                        <input type="radio" id="afternoon" name="time" value="afternoon">
+                        <label for="afternoon">
+                            <i class="fa-solid fa-sun"></i>
+                            <span>Afternoon</span>
+                            <small>12pm - 5pm</small>
+                        </label>
+                    </div>
+                    <div class="time-item">
+                        <input type="radio" id="evening" name="time" value="evening">
+                        <label for="evening">
+                            <i class="fa-solid fa-moon"></i>
+                            <span>Evening</span>
+                            <small>6pm - 11pm</small>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Updated CTA buttons with icons -->
+            <div class="profile-cta-container">
+                <button type="submit" class="cta-button primary-cta">
+                    <i class="fa-solid fa-floppy-disk"></i> Save Profile
+                </button>
+                <a href="new-project.html" class="cta-button secondary-cta">
+                    <i class="fa-solid fa-rocket"></i> Start Your First Project
+                </a>
+            </div>
+        </form>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intro.js/8.3.2/intro.min.js" integrity="sha512-5ykRz1AkSpATwLO5fFqJb7Y5kprfzu/q9PbRVSOspLcn2Tm7m6vZIAyoUA4a5GFNRIlxM43kHXmYEphfz3eOWA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="../js/profile.js"></script>
+    <script src="../js/onboarding-profile.js"></script>
+</body>
+</html>
